@@ -26,27 +26,27 @@ m-build是面向前端自动化开发工具。主要解决多人开发，目录�
 window安装
 
 ```
-	npm install -g gulp-cli m-build
+npm install -g gulp-cli m-build
 ```
 mac 安装
 
 ```
-	sudo npm install -g gulp-cli m-build
+sudo npm install -g gulp-cli m-build
 ```
 
 安装完成以后你的电脑会有 m 命令，命令如下:
 
 ```
-	m -h
+m -h
 
-		Usage: m [options]
+	Usage: m [options]
 
-	Options:
-		-h, --help		output usage information
-		-v,--version		output the version number
-		--creat [h5|m]		创建目录目录结构
-		--run [value]		开启服务
-		--pack			打包
+Options:
+	-h, --help		output usage information
+	-v,--version		output the version number
+	--creat [h5|m]		创建目录目录结构
+	--run [value]		开启服务
+	--pack			打包
 ```
 #### 初始化
 进入目录
