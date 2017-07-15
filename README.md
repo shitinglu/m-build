@@ -54,47 +54,47 @@ mac 安装
 第一步:初始化目录和配置文件
 
 ```
-	m creat
-		默认 h5
-		可选 m
+m creat
+	默认 h5
+	可选 m
 ```
 创建的目录结构如下
 
 ```
 
-	creat-project
-	└── node_modules
-		│
-		projectName
-		├── pageName
-		│    ├── src
-		│    │   ├── css
-		│    │   ├── jss
-		│    │   ├── i
-		│    │   ├── sass
-		│    |   ├── temp
-		│    │   └── index.html
-		│    ├── build
-		│    │   ├── css
-		│    │   ├── i
-		│    │   ├── js
-		│    │   └── index.html
-		│    └── config.js
-		├── package.json
-		└── gulpfile.js
+creat-project
+└── node_modules
+	│
+	projectName
+	├── pageName
+	│    ├── src
+	│    │   ├── css
+	│    │   ├── jss
+	│    │   ├── i
+	│    │   ├── sass
+	│    |   ├── temp
+	│    │   └── index.html
+	│    ├── build
+	│    │   ├── css
+	│    │   ├── i
+	│    │   ├── js
+	│    │   └── index.html
+	│    └── config.js
+	├── package.json
+	└── gulpfile.js
 
 ```
 
 第二步：下载项目需要的包依赖
 
 ```
-	npm install
+npm install
 ```
 
 #### 开启服务
  
 ```
-	m run  或者用 gulp
+m run  或者用 gulp
 ```
 
 开启服务以后会自动启动browser-snyc，sass编译监听，css编译监听，js打包监听，html压缩监听
@@ -102,5 +102,5 @@ mac 安装
 #### 项目打包
 
 ``` 
- 	m pack 或者用 gulp pack
+ m pack 或者用 gulp pack
 ```
