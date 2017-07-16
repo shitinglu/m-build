@@ -6,17 +6,19 @@ m-build是面向前端自动化开发工具。主要解决多人开发，目录�
 
 ##### m-build主要集成以下功能:
 
-1.browser-snyc自动搭建本地开发环境，多端代码同步和刷新调试功能。
+1. browser-snyc自动搭建本地开发环境，多端代码同步和刷新调试功能。
 
-2.webpack模块化组件化开发功能。同时也支持rollup.js。
+2. webpack模块化组件化开发功能。同时也支持rollup.js。
 
-3.bable代码编译功能。ES6转ES5，react，vue的编译。
+3. bable代码编译功能。ES6转ES5的编译。
 
-4.sass的代码编译功能以后会集成less
+4. react,vue的编译功能
 
-5.css,sass的REM的自动换算功能可以根据不同设计稿配置不一样的转换值。
+5. sass的代码编译功能以后会集成less
 
-6.art-template模板编译功能(此版本有问题需要后期改源码)
+6. css,sass的REM的自动换算功能可以根据不同设计稿配置不一样的转换值。
+
+7. art-template模板编译功能
 
 
 #### 环境安装
@@ -25,12 +27,12 @@ m-build是面向前端自动化开发工具。主要解决多人开发，目录�
 #### 安装
 window安装
 
-```
+``` bash
 npm install -g gulp-cli m-build
 ```
 mac 安装
 
-```
+``` bash
 sudo npm install -g gulp-cli m-build
 ```
 
@@ -53,7 +55,7 @@ Options:
 
 第一步:初始化目录和配置文件
 
-```
+``` bash
 m creat
 	默认 h5
 	可选 m
@@ -87,7 +89,7 @@ creat-project
 
 第二步：下载项目需要的包依赖
 
-```
+``` bash
 npm install
 ```
 
@@ -97,10 +99,117 @@ npm install
 m run  或者用 gulp
 ```
 
-开启服务以后会自动启动browser-snyc，sass编译监听，css编译监听，js打包监听，html压缩监听
+> 开启服务以后会自动启动browser-snyc，sass编译监听，css编译监听，js打包监听，html压缩监听等功能...
 
 #### 项目打包
 
 ``` 
  m pack 或者用 gulp pack
 ```
+> 对src目录下的js,css,sass,html,tempale进行编译打包输出到dist目录
+
+
+---
+
+
+#### 单个模块监听功能
+
+- 开启服务
+ 
+```
+gulp  server
+```
+> 监听dist目录所有目录文件。如果dist目录发生改变会刷新页面。同时开启多端同步和调试服务。
+
+- js文件编译监听
+ 
+```
+gulp  jsWatch
+```
+> 监听src目录下的js目录的`entry*.js`文件编译打包。编译以后的文件输出到同级目录下的的dist目录下的js目录。
+
+- sass编译监听
+
+```
+gulp  sassWatch
+```
+> 监听src目录下的sass目录的`*.scss`文件的编译。编译以后的文件输出到同级目录下的的dist目录下的css目录
+
+- css编译监听
+
+```
+gulp  cssWatch
+```
+> 监听src目录下的css目录的`*.css`文件的编译。编译以后的文件输出到同级目录下的的dist目录下的css目录
+
+- html压缩监听
+
+```
+gulp  htmlWatch
+```
+> 监听src目录的`*.html`文件的压缩。压缩以后的文件输出到同级目录下的的dist目录
+
+- 图片监听
+
+```
+gulp  imgWatch
+```
+> 监听src目录下的i目录的`*.png|jpg|gif`文件。压缩以后的文件输出到同级目录下的的dist目录下的i目录
+
+- 模板编译监听
+
+```
+gulp  tempWacth
+```
+> 监听src目录下的temp目录的`*.html`文件对文件进行编译。编译以后的文件输出到同级目录的dist目录下的js目录
+
+
+
+---
+
+
+#### 单个模块编译功能
+- js文件编译
+ 
+```
+gulp  jsPack
+```
+> 对src目录下的js目录的`entry*.js`文件编译打包。编译以后的文件输出到同级目录下的的dist目录下的js目录。
+
+- sass编译
+
+```
+gulp  sassPack
+```
+> 对src目录下的sass目录的`*.scss`文件的编译。编译以后的文件输出到同级目录下的的dist目录下的css目录
+
+- css编译
+
+```
+gulp  cssPack
+```
+> 对src目录下的css目录的`*.css`文件的编译。编译以后的文件输出到同级目录下的的dist目录下的css目录
+
+- html压缩
+
+```
+gulp  htmlPack
+```
+> 对src目录的`*.html`文件的压缩。压缩以后的文件输出到同级目录下的的dist目录
+
+- 图片处理
+
+```
+gulp  imgPack
+```
+> 对src目录下的i目录的`*.png|jpg|gif`文件。压缩以后的文件输出到同级目录下的的dist目录下的i目录
+
+- 模板编译
+
+```
+gulp  tempPack
+```
+> 对src目录下的temp目录的`*.html`文件对文件进行编译。编译以后的文件输出到同级目录的dist目录下的js目录
+
+
+##### 未完待续后续功能还在继续开发.........
