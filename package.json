@@ -6,6 +6,10 @@
   "bin": {
     "m": "bin/m.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shitinglu/m-build"
+  },
   "dependencies": {
     "colors-cli": "^1.0.8",
     "commander": "^2.11.0",
