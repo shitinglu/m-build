@@ -13,7 +13,7 @@ const pack = require('../lib/pack');
 program
   .allowUnknownOption()
   .version(packageJson.version, '-v,--version')
-  .option('creat [value]', '初始化目录[ h5 | m ]')
+  .option('init [value]', '初始化目录[ h5 | m ]')
   .option('run [value]', '开启服务')
   .option('pack [value]', '打包')
   .parse(process.argv);
