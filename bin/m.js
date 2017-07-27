@@ -4,7 +4,7 @@
 
 const program = require('commander');
 const packageJson = require('../package.json');
-const creat = require('../lib/creat');
+const init = require('../lib/init');
 const run = require('../lib/run');
 const pack = require('../lib/pack');
 
@@ -19,8 +19,8 @@ program
   .parse(process.argv);
 
 
-if (program.creat) {
-  creat(program.creat);
+if (program.init) {
+  init(program.init);
 } else if (program.run) {
   run(program.run);
 } else if (program.pack) {

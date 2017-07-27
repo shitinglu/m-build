@@ -46,7 +46,7 @@ m -h
 Options:
 	-h, --help		output usage information
 	-v,--version		output the version number
-	--creat [h5|m]		创建目录目录结构
+	--init [h5|m]		创建目录目录结构
 	--run [value]		开启服务
 	--pack			打包
 ```
@@ -56,7 +56,7 @@ Options:
 第一步:初始化目录和配置文件
 
 ``` bash
-m creat
+m init
 	默认 h5
 	可选 m
 ```
@@ -94,7 +94,7 @@ npm install
 ```
 
 #### 开启服务
- 
+
 ```
 m run  或者用 gulp
 ```
@@ -103,7 +103,7 @@ m run  或者用 gulp
 
 #### 项目打包
 
-``` 
+```
  m pack 或者用 gulp pack
 ```
 > 对src目录下的js,css,sass,html,tempale进行编译打包输出到dist目录
@@ -115,14 +115,14 @@ m run  或者用 gulp
 #### 单个模块监听功能
 
 - 开启服务
- 
+
 ```
 gulp  server
 ```
 > 监听dist目录所有目录文件。如果dist目录发生改变会刷新页面。同时开启多端同步和调试服务。
 
 - js文件编译监听
- 
+
 ```
 gulp  jsWatch
 ```
@@ -170,7 +170,7 @@ gulp  tempWacth
 
 #### 单个模块编译功能
 - js文件编译
- 
+
 ```
 gulp  jsPack
 ```
