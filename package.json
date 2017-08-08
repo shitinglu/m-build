@@ -1,6 +1,6 @@
 {
   "name": "m-build",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "m-build 把webpack，rollup，bable,browser-snyc，全部都集成到gulp里面只需要你在config里面配置一下就可以选择自己的打包方式,适合安装一次不用多次安装，配置每次只需要改下目录路径就好。",
   "main": "index.js",
   "bin": {

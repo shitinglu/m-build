@@ -47,8 +47,9 @@ Options:
 	-h, --help		output usage information
 	-v,--version		output the version number
 	--init [h5|m]		创建目录目录结构
-	--run [value]		开启服务
-	--pack			打包
+	--run        		开启服务
+	--compile           编译所有文件
+	--pack			    打包到线上环境
 ```
 #### 初始化
 进入目录
@@ -101,12 +102,18 @@ m run  或者用 gulp
 
 > 开启服务以后会自动启动browser-snyc，sass编译监听，css编译监听，js打包监听，html压缩监听等功能...
 
+#### 项目全部编译
+```
+ m compile 或者用 gulp cmopile
+```
+> 对src目录下所有js,sass,css,images,template,vm 进行编译，并输出到dist目录的对应子目录
+
 #### 项目打包
 
 ```
  m pack 或者用 gulp pack
 ```
-> 对src目录下的js,css,sass,html,tempale进行编译打包输出到dist目录
+> 对dist目录下的js,css,html,tempate,vm进行压缩合并输出到build目录
 
 
 ---
@@ -127,6 +134,13 @@ gulp  server
 gulp  jsWatch
 ```
 > 监听src目录下的js目录的`entry*.js`文件编译打包。编译以后的文件输出到同级目录下的的dist目录下的js目录。
+
+- js文件移动监听
+
+```
+gulp  jsLabWatch
+```
+> 监听src目录下的js-lab目录的`*.js`文件。新增和改动的文件文件输出到同级目录下的的dist目录下的js目录。
 
 - sass编译监听
 
@@ -172,44 +186,79 @@ gulp  tempWacth
 - js文件编译
 
 ```
-gulp  jsPack
+gulp  jsCompile
 ```
 > 对src目录下的js目录的`entry*.js`文件编译打包。编译以后的文件输出到同级目录下的的dist目录下的js目录。
 
 - sass编译
 
 ```
-gulp  sassPack
+gulp  sassCompile
 ```
 > 对src目录下的sass目录的`*.scss`文件的编译。编译以后的文件输出到同级目录下的的dist目录下的css目录
 
 - css编译
 
 ```
-gulp  cssPack
+gulp  cssCompile
 ```
 > 对src目录下的css目录的`*.css`文件的编译。编译以后的文件输出到同级目录下的的dist目录下的css目录
 
 - html压缩
 
 ```
-gulp  htmlPack
+gulp  htmlCompile
 ```
 > 对src目录的`*.html`文件的压缩。压缩以后的文件输出到同级目录下的的dist目录
 
 - 图片处理
 
 ```
-gulp  imgPack
+gulp  imgCompile
 ```
 > 对src目录下的i目录的`*.png|jpg|gif`文件。压缩以后的文件输出到同级目录下的的dist目录下的i目录
 
 - 模板编译
 
 ```
-gulp  tempPack
+gulp  tempCompile
 ```
 > 对src目录下的temp目录的`*.html`文件对文件进行编译。编译以后的文件输出到同级目录的dist目录下的js目录
+
+
+---
+
+#### 单个模块打包功能
+- js文件打包
+
+```
+gulp  jsPack
+```
+> 对dist目录下的js目录的`*.js`文件压缩混淆打包。编译以后的文件输出到同级目录下的的build目录下的js目录。
+
+
+- css编译
+
+```
+gulp  cssPack
+```
+> 对src目录下的css目录的`*.css`文件压缩混淆。编译以后的文件输出到同级目录下的的build目录下的css目录
+
+- html压缩
+
+```
+gulp  htmlPack
+```
+> 对dist目录的`*.html`文件的压缩。压缩以后的文件输出到同级目录下的的build目录
+
+- 图片处理
+
+```
+gulp  imgPack
+```
+> 对dist目录下的i目录的`*.png|jpg|gif`文件。压缩以后的文件输出到同级目录下的的build目录下的i目录
+
+
 
 
 ##### 未完待续后续功能还在继续开发.........
