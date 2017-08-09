@@ -64,6 +64,6 @@
     "vue-loader": "^8.2.1",
     "vue-router": "^2.0.2",
     "vue-style-loader": "^1.0.0",
-    "webpack": "^2.6.1"
+    "webpack": "^3.5.1"
   }
 }

@@ -73,6 +73,6 @@
     "mockjs": "^1.0.1-beta3",
     "postcss-pxtorem": "^4.0.1",
     "gulp-postcss": "^7.0.0",
-    "webpack": "^2.6.1"
+    "webpack": "^3.5.1"
   }
 }
