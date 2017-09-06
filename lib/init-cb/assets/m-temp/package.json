@@ -16,6 +16,8 @@
   "author": "shitinglu",
   "license": "ISC",
   "devDependencies": {
+    "art-template":"4.12.1",
+    "art-template-loader":"^1.4.3",
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.0",
